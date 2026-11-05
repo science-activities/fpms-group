@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Navigation Sidebar -->
+        <nav class="sidebar-left">
+            <div class="nav-item logo">
+                <img src="https://ui-avatars.com/api/?name=Yoshi&background=random&color=fff&rounded=true" alt="User">
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item active">
+                <div class="badge">9+</div>
+                <i class="fas fa-comment"></i>
+                <span>Message</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </div>
+        </nav>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message received">
+                    <div class="bubble">Doing things</div>
+                </div>
+                <div class="message sent">
+                    <div class="bubble">Watcha Doin</div>
+                </div>
+                <div class="message sent">
+                    <div class="bubble">Ok</div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <i class="fas fa-plus icon-plus"></i>
+                    <input type="text" id="message-input" placeholder="Start typing...">
+                    <div class="input-actions">
+                        <span class="gif-btn">GIF</span>
+                        <i class="far fa-smile"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Contact Sidebar -->
+        <aside class="sidebar-right">
+            <button class="new-group-btn"><i class="fas fa-plus"></i> New Group</button>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=Theodore+Tyrcha&background=random" alt="Theodore Tyrcha">
+                    <span>Theodore Tyrcha</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=Jared+Neumann&background=random" alt="Jared Neumann">
+                    <span>Jared Neumann</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=renamable+group!!&background=random" alt="renamable group!!">
+                    <span>renamable group!!</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=Cooper+Jones&background=random" alt="Cooper Jones">
+                    <span>Cooper Jones</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=Kenneth+Wang&background=random" alt="Kenneth Wang">
+                    <span>Kenneth Wang</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=Myles+Thao&background=random" alt="Myles Thao">
+                    <span>Myles Thao</span>
+                </div>
+                <div class="contact-item">
+                    <img src="https://ui-avatars.com/api/?name=Vincent+Rathmann&background=e91e63&color=fff" alt="Vincent Rathmann">
+                    <span>Vincent Rathmann</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

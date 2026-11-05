@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    background-color: #000000;
+}
+
+/* Left Sidebar */
+.sidebar-left {
+    width: 80px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 1px solid #222;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-item.logo {
+    margin-bottom: 40px;
+}
+.nav-item.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.nav-item.active {
+    color: #1db954;
+}
+
+.nav-item.active i, .nav-item.active span {
+    color: #fff;
+}
+.nav-item.active {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.nav-item.active i {
+    color: #1db954; /* Green color for active icon */
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    background-color: #1db954;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 10px;
+    border: 2px solid #121212;
+}
+
+/* Main Chat Area */
+.chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    display: flex;
+    width: 100%;
+}
+
+.message.received {
+    justify-content: flex-start;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.bubble {
+    max-width: 60%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.message.received .bubble {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-bottom-left-radius: 5px;
+}
+
+.message.sent .bubble {
+    background-color: #1db954; /* WhatsApp/iMessage style green */
+    color: #ffffff;
+    border-bottom-right-radius: 5px;
+}
+
+/* Input Area */
+.chat-input-container {
+    padding: 20px 30px;
+    padding-bottom: 40px;
+}
+
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 12px 15px;
+}
+
+.icon-plus {
+    color: #888;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#message-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+#message-input::placeholder {
+    color: #888;
+    font-weight: 500;
+}
+
+.input-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gif-btn {
+    background-color: #333;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fa-smile {
+    color: #888;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Right Sidebar */
+.sidebar-right {
+    width: 320px;
+    background-color: #0a0a0a;
+    border-left: 1px solid #222;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-group-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #121212;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    background-color: #1a1a1a;
+}
+
+.contact-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.contact-item span {
+    font-size: 15px;
+    font-weight: 600;
+}
